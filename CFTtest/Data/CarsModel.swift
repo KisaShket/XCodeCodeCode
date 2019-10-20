@@ -8,18 +8,19 @@
 
 import Foundation
 import RealmSwift
+
 class CarsModel: Object {
     @objc dynamic var manufacturer: String = ""
     @objc dynamic var model: String = ""
-    @objc dynamic var bodyType: String = ""
-    @objc dynamic var engineType: String = ""
     @objc dynamic var horsePower: String = ""
-    
-    
+    @objc dynamic var engineType: String = ""
+    @objc dynamic var bodyType: String = ""
+    @objc dynamic var issueDate: String = ""
     @objc dynamic var id = UUID().uuidString
     
     override static func primaryKey() -> String? {
         return "id"
     }
+    
 }
 

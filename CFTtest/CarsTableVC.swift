@@ -12,7 +12,7 @@ import RealmSwift
 class CarsTableVC:UITableViewController{
     var dataSrc: Results<CarsModel>!
     
-    //MARK: обновление вью, получение данных
+    //MARK:- обновление вью, получение данных
     func reloadTable(){
         dataSrc = CarsController.fetchCars()
         tableView?.reloadData()
@@ -54,12 +54,15 @@ class CarsTableVC:UITableViewController{
             EditCars.manufacturerToEdit = Cars.manufacturer
             EditCars.modelToEdit = Cars.model
             EditCars.horsePowerToEdit = Cars.horsePower
-            
+            EditCars.bodyTypeToEdit = Cars.bodyType
+            EditCars.engineTypeToEdit = Cars.engineType
+            EditCars.issueDateToEdit = Cars.issueDate
         }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "editCars", sender: nil)
+        
     }
     
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {

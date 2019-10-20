@@ -1,0 +1,6 @@
+framework module Pods_CFTtestUITests {
+  umbrella header "Pods-CFTtestUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
