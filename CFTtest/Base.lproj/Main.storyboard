@@ -12,13 +12,13 @@
         <!--Car-->
         <scene sceneID="QeQ-Qf-9ZF">
             <objects>
-                <tableViewController id="pLc-Mq-z21" sceneMemberID="viewController">
+                <tableViewController id="pLc-Mq-z21" customClass="CarsTableVC" customModule="CFTtest" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="H6C-5t-NRs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="studentCell" textLabel="sbq-Eh-YKw" detailTextLabel="M7U-Nh-fcP" style="IBUITableViewCellStyleValue1" id="iRE-DK-yEg">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="carsCell" textLabel="sbq-Eh-YKw" detailTextLabel="M7U-Nh-fcP" style="IBUITableViewCellStyleValue1" id="iRE-DK-yEg">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iRE-DK-yEg" id="RSY-6c-eAl">
@@ -51,13 +51,13 @@
                     <navigationItem key="navigationItem" title="Car" id="YT2-LP-Uxt">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ifx-K1-t56">
                             <connections>
-                                <action selector="toAdd:" destination="pLc-Mq-z21" id="Hs5-SO-9kb"/>
+                                <action selector="toAddSegue:" destination="pLc-Mq-z21" id="NfD-Zq-VG1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="mz1-v8-DTF" kind="show" identifier="showStudent" id="nvt-l5-F0O"/>
-                        <segue destination="mz1-v8-DTF" kind="show" identifier="editStudent" id="MCl-IS-OYF"/>
+                        <segue destination="mz1-v8-DTF" kind="show" identifier="showCars" id="nvt-l5-F0O"/>
+                        <segue destination="mz1-v8-DTF" kind="show" identifier="editCars" id="MCl-IS-OYF"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eN5-87-gtT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -84,14 +84,21 @@
         <!--Car-->
         <scene sceneID="0Hi-Nx-Dk5">
             <objects>
-                <tableViewController id="mz1-v8-DTF" customClass="AddEditStudents" customModule="msCVT" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="mz1-v8-DTF" customClass="AddEditCars" customModule="CFTtest" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="xQB-eP-Uvu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="separatorColor" red="0.1172517166" green="0.52491402629999995" blue="0.99847787619999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <datePicker key="tableFooterView" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" id="PXR-e8-ADZ">
+                            <rect key="frame" x="0.0" y="517.5" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <date key="date" timeIntervalSinceReferenceDate="593270955.84407997">
+                                <!--2019-10-20 13:29:15 +0000-->
+                            </date>
+                        </datePicker>
                         <sections>
-                            <tableViewSection headerTitle="Model" id="j0m-Zq-ExS">
+                            <tableViewSection headerTitle="Производитель" id="j0m-Zq-ExS">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="her-tt-eJm">
                                         <rect key="frame" x="0.0" y="55.5" width="414" height="44"/>
@@ -101,7 +108,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S7h-ev-f57">
-                                                    <rect key="frame" x="8" y="6" width="359" height="30"/>
+                                                    <rect key="frame" x="8" y="7" width="399" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -112,7 +119,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Engine" id="51c-he-hyO">
+                            <tableViewSection headerTitle="Модель" id="51c-he-hyO">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="0Rf-Bs-T9Z">
                                         <rect key="frame" x="0.0" y="155.5" width="414" height="44"/>
@@ -122,7 +129,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DQR-nF-81m">
-                                                    <rect key="frame" x="8" y="6" width="359" height="30"/>
+                                                    <rect key="frame" x="8" y="6" width="398" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -133,22 +140,65 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Consumption" id="dzg-Fx-F2w">
+                            <tableViewSection headerTitle="Мощность" id="FP5-bb-Mb3">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="rSE-cO-MMV">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="633-NT-Wty">
                                         <rect key="frame" x="0.0" y="255.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rSE-cO-MMV" id="dmQ-fx-n2j">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="633-NT-Wty" id="Hxk-V6-LK5">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9RO-SO-xHu">
-                                                    <rect key="frame" x="8" y="6" width="359" height="30"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OUB-Ed-SXb">
+                                                    <rect key="frame" x="8" y="6" width="397" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Тип двигателя" id="hu6-V1-LFM">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="bDt-0I-QvY">
+                                        <rect key="frame" x="0.0" y="355.5" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bDt-0I-QvY" id="8Xu-Sz-aJK">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oyF-u9-Jkm">
+                                                    <rect key="frame" x="8" y="6" width="397" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wnc-eZ-mKQ">
+                                                    <rect key="frame" x="-1" y="-96" width="414" height="216"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                </pickerView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="тип кузова" id="dzg-Fx-F2w">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="rSE-cO-MMV">
+                                        <rect key="frame" x="0.0" y="455.5" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rSE-cO-MMV" id="dmQ-fx-n2j">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qqy-Zq-ebN">
+                                                    <rect key="frame" x="0.0" y="-86" width="414" height="216"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                </pickerView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -164,21 +214,21 @@
                         <barButtonItem key="backBarButtonItem" id="Ng3-pE-Bi9"/>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="SLk-qZ-58R">
                             <connections>
-                                <action selector="saveStudent:" destination="mz1-v8-DTF" id="ySz-tB-QGK"/>
+                                <action selector="saveCar:" destination="mz1-v8-DTF" id="pK1-Wx-0sa"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="studentMarkTxt" destination="9RO-SO-xHu" id="ogw-fo-qHv"/>
-                        <outlet property="studentNameTxt" destination="S7h-ev-f57" id="Okc-nm-47U"/>
-                        <outlet property="studentSurnameTxt" destination="DQR-nF-81m" id="xLv-YN-w3h"/>
+                        <outlet property="carsHorsePowerTxt" destination="OUB-Ed-SXb" id="qbH-w5-z0E"/>
+                        <outlet property="carsManufacturerTxt" destination="S7h-ev-f57" id="Ha9-bc-wsu"/>
+                        <outlet property="carsModelTxt" destination="DQR-nF-81m" id="Qnm-OT-SAh"/>
                         <segue destination="N8K-Hk-UTD" kind="unwind" identifier="saving" unwindAction="saveToMainViewControllerWithSegue:" id="o39-M9-tHp"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dOX-jP-Xqa" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="N8K-Hk-UTD" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1612" y="-164"/>
+            <point key="canvasLocation" x="1611.5942028985507" y="-164.0625"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

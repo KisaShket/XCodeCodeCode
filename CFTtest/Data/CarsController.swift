@@ -14,7 +14,7 @@ class CarsController:NSObject{
     class func saveEditCars(Cars:CarsModel){
         let realm = try! Realm()
         try! realm.write {
-            realm.add(Cars)
+            realm.add(Cars, update: .modified)
         }
     }
     
