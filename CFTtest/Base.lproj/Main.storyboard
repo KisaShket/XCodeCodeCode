@@ -100,14 +100,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S7h-ev-f57">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S7h-ev-f57">
                                                     <rect key="frame" x="8" y="7" width="399" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="S7h-ev-f57" firstAttribute="leading" secondItem="zCc-Vt-uVs" secondAttribute="leadingMargin" constant="-12" id="AI8-sb-1bJ"/>
+                                                <constraint firstItem="S7h-ev-f57" firstAttribute="centerY" secondItem="zCc-Vt-uVs" secondAttribute="centerY" id="Ski-kD-58r"/>
+                                                <constraint firstItem="S7h-ev-f57" firstAttribute="centerX" secondItem="zCc-Vt-uVs" secondAttribute="centerX" id="VuB-J9-nZg"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="S7h-ev-f57" secondAttribute="bottom" constant="-4" id="uf5-4v-a1V"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -121,14 +126,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DQR-nF-81m">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DQR-nF-81m">
                                                     <rect key="frame" x="8" y="6" width="398" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="DQR-nF-81m" firstAttribute="centerX" secondItem="vcM-HR-Ov4" secondAttribute="centerX" id="A6W-IV-y3i"/>
+                                                <constraint firstItem="DQR-nF-81m" firstAttribute="leading" secondItem="vcM-HR-Ov4" secondAttribute="leadingMargin" constant="-12" id="DWf-iX-Mkf"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="DQR-nF-81m" secondAttribute="bottom" constant="-3" id="KqH-d9-sSU"/>
+                                                <constraint firstItem="DQR-nF-81m" firstAttribute="centerY" secondItem="vcM-HR-Ov4" secondAttribute="centerY" id="b87-ZK-I8e"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -142,14 +152,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qKL-SI-9bp">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qKL-SI-9bp">
                                                     <rect key="frame" x="8" y="7" width="398" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="qKL-SI-9bp" firstAttribute="leading" secondItem="Hxk-V6-LK5" secondAttribute="leadingMargin" constant="-12" id="W48-9c-MjL"/>
+                                                <constraint firstItem="qKL-SI-9bp" firstAttribute="centerY" secondItem="Hxk-V6-LK5" secondAttribute="centerY" id="ZZH-W7-HnQ"/>
+                                                <constraint firstItem="qKL-SI-9bp" firstAttribute="centerX" secondItem="Hxk-V6-LK5" secondAttribute="centerX" id="boZ-Qz-iPT"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="qKL-SI-9bp" secondAttribute="bottom" constant="-4" id="sAf-PD-D54"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -163,15 +178,20 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E5N-VI-oXY">
+                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E5N-VI-oXY">
                                                     <rect key="frame" x="0.0" y="-73" width="414" height="216"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                     <connections>
                                                         <outlet property="dataSource" destination="mz1-v8-DTF" id="Zn1-lA-IWN"/>
                                                         <outlet property="delegate" destination="mz1-v8-DTF" id="ArZ-TY-twB"/>
                                                     </connections>
                                                 </pickerView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="E5N-VI-oXY" secondAttribute="trailing" id="7gc-Ck-cG1"/>
+                                                <constraint firstItem="E5N-VI-oXY" firstAttribute="centerY" secondItem="8Xu-Sz-aJK" secondAttribute="centerY" id="8fy-Tb-Zyf"/>
+                                                <constraint firstItem="E5N-VI-oXY" firstAttribute="leading" secondItem="8Xu-Sz-aJK" secondAttribute="leading" id="aaB-b5-hqA"/>
+                                                <constraint firstItem="E5N-VI-oXY" firstAttribute="top" secondItem="8Xu-Sz-aJK" secondAttribute="topMargin" constant="-84" id="w3A-1B-zPp"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -185,15 +205,20 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wKM-ef-fkX">
+                                                <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wKM-ef-fkX">
                                                     <rect key="frame" x="0.0" y="-74" width="414" height="216"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                     <connections>
                                                         <outlet property="dataSource" destination="mz1-v8-DTF" id="iVi-Xf-ldr"/>
                                                         <outlet property="delegate" destination="mz1-v8-DTF" id="qTn-YN-t2I"/>
                                                     </connections>
                                                 </pickerView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="wKM-ef-fkX" firstAttribute="top" secondItem="dmQ-fx-n2j" secondAttribute="topMargin" constant="-85" id="6vV-9t-VuW"/>
+                                                <constraint firstAttribute="trailing" secondItem="wKM-ef-fkX" secondAttribute="trailing" id="Bz5-I0-sXg"/>
+                                                <constraint firstItem="wKM-ef-fkX" firstAttribute="centerY" secondItem="dmQ-fx-n2j" secondAttribute="centerY" id="DMK-iT-TyP"/>
+                                                <constraint firstItem="wKM-ef-fkX" firstAttribute="leading" secondItem="dmQ-fx-n2j" secondAttribute="leading" id="SCY-pT-hir"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -207,14 +232,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TYJ-dn-thJ">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TYJ-dn-thJ">
                                                     <rect key="frame" x="8" y="6" width="398" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="TYJ-dn-thJ" firstAttribute="leading" secondItem="Cq7-M7-ovP" secondAttribute="leadingMargin" constant="-12" id="Jau-JH-Ny9"/>
+                                                <constraint firstItem="TYJ-dn-thJ" firstAttribute="centerY" secondItem="Cq7-M7-ovP" secondAttribute="centerY" id="YFR-ww-CzX"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="TYJ-dn-thJ" secondAttribute="bottom" constant="-3" id="clJ-Ng-GFw"/>
+                                                <constraint firstItem="TYJ-dn-thJ" firstAttribute="centerX" secondItem="Cq7-M7-ovP" secondAttribute="centerX" id="mAS-V7-mI9"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
