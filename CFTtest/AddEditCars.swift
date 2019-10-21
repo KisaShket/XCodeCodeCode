@@ -10,10 +10,6 @@ import Foundation
 import RealmSwift
 
 class AddEditCars:UITableViewController,UIPickerViewDelegate,UIPickerViewDataSource{
- 
-    
-    
-
     @IBOutlet weak var carsManufacturerTxt: UITextField!
     @IBOutlet weak var carsModelTxt: UITextField!
     @IBOutlet weak var carsHorsePowerTxt: UITextField!
@@ -47,8 +43,6 @@ class AddEditCars:UITableViewController,UIPickerViewDelegate,UIPickerViewDataSou
     
     }
     
-    
-    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
                 if pickerView == bodyTypePicker{
@@ -61,7 +55,6 @@ class AddEditCars:UITableViewController,UIPickerViewDelegate,UIPickerViewDataSou
                     return engineType[row]
                 }
             }
-    
     
     func savingCars(){
         let newCar = CarsModel()
@@ -81,7 +74,6 @@ class AddEditCars:UITableViewController,UIPickerViewDelegate,UIPickerViewDataSou
         
     }
     
-   
     override func viewWillAppear(_ animated: Bool) {
         carsManufacturerTxt.text = manufacturerToEdit
         carsModelTxt.text = modelToEdit
