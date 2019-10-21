@@ -54,9 +54,7 @@ class CarsTableVC:UITableViewController{
             EditCars.manufacturerToEdit = Cars.manufacturer
             EditCars.modelToEdit = Cars.model
             EditCars.horsePowerToEdit = Cars.horsePower
-            EditCars.bodyTypeToEdit = Cars.bodyType
-            EditCars.engineTypeToEdit = Cars.engineType
-            EditCars.issueDateToEdit = Cars.issueDate
+           
         }
     }
     

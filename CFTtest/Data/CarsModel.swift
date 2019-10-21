@@ -16,6 +16,8 @@ class CarsModel: Object {
     @objc dynamic var engineType: String = ""
     @objc dynamic var bodyType: String = ""
     @objc dynamic var issueDate: String = ""
+    @objc dynamic var bodyTypeRow: Int = 0
+    @objc dynamic var engineTypeRow: Int = 0
     @objc dynamic var id = UUID().uuidString
     
     override static func primaryKey() -> String? {

@@ -19,6 +19,7 @@
 		40035899235B4CB300BB3456 /* CarsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40035898235B4CB300BB3456 /* CarsModel.swift */; };
 		4003589B235B4D0600BB3456 /* CarsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4003589A235B4D0600BB3456 /* CarsController.swift */; };
 		40E69435235C948300231C71 /* AddEditCars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E69434235C948300231C71 /* AddEditCars.swift */; };
+		40E69439235DF5B200231C71 /* EngineAndBodyTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E69438235DF5B100231C71 /* EngineAndBodyTypes.swift */; };
 		BD5CE994BDB1713090B86811 /* Pods_CFTtestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0000E8544AA0220A8E476F1 /* Pods_CFTtestTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		40035898235B4CB300BB3456 /* CarsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsModel.swift; sourceTree = "<group>"; };
 		4003589A235B4D0600BB3456 /* CarsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsController.swift; sourceTree = "<group>"; };
 		40E69434235C948300231C71 /* AddEditCars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditCars.swift; sourceTree = "<group>"; };
+		40E69438235DF5B100231C71 /* EngineAndBodyTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EngineAndBodyTypes.swift; sourceTree = "<group>"; };
 		580C1CEC135A59ADB7719880 /* Pods-CFTtest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CFTtest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CFTtest/Pods-CFTtest.debug.xcconfig"; sourceTree = "<group>"; };
 		583F869E6EFEF62BCE85C1C9 /* Pods-CFTtest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CFTtest.release.xcconfig"; path = "Pods/Target Support Files/Pods-CFTtest/Pods-CFTtest.release.xcconfig"; sourceTree = "<group>"; };
 		72360A21AE120092F4C518D5 /* Pods-CFTtestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CFTtestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CFTtestUITests/Pods-CFTtestUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			children = (
 				40035898235B4CB300BB3456 /* CarsModel.swift */,
 				4003589A235B4D0600BB3456 /* CarsController.swift */,
+				40E69438235DF5B100231C71 /* EngineAndBodyTypes.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 				40035899235B4CB300BB3456 /* CarsModel.swift in Sources */,
 				40E69435235C948300231C71 /* AddEditCars.swift in Sources */,
 				40035895235B4C5000BB3456 /* CarsTableVC.swift in Sources */,
+				40E69439235DF5B200231C71 /* EngineAndBodyTypes.swift in Sources */,
 				4003589B235B4D0600BB3456 /* CarsController.swift in Sources */,
 				40035867235B3ACF00BB3456 /* AppDelegate.swift in Sources */,
 			);

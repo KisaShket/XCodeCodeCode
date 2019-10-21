@@ -170,13 +170,14 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8qM-O0-tSx">
-                                                    <rect key="frame" x="8" y="7" width="398" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
+                                                <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E5N-VI-oXY">
+                                                    <rect key="frame" x="0.0" y="-86" width="414" height="216"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="mz1-v8-DTF" id="Zn1-lA-IWN"/>
+                                                        <outlet property="delegate" destination="mz1-v8-DTF" id="ArZ-TY-twB"/>
+                                                    </connections>
+                                                </pickerView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -191,13 +192,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cKl-lp-Umw">
-                                                    <rect key="frame" x="8" y="6" width="398" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
+                                                <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wKM-ef-fkX">
+                                                    <rect key="frame" x="0.0" y="-87" width="414" height="216"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="mz1-v8-DTF" id="iVi-Xf-ldr"/>
+                                                        <outlet property="delegate" destination="mz1-v8-DTF" id="qTn-YN-t2I"/>
+                                                    </connections>
+                                                </pickerView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -219,13 +221,13 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AjS-Rt-maQ">
-                                                    <rect key="frame" x="7" y="6" width="398" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
+                                                <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="LKi-m6-0gr">
+                                                    <rect key="frame" x="0.0" y="-60" width="414" height="162"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                    <date key="date" timeIntervalSinceReferenceDate="593360344.14507198">
+                                                        <!--2019-10-21 14:19:04 +0000-->
+                                                    </date>
+                                                </datePicker>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -246,12 +248,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="bodyTypeTxt" destination="cKl-lp-Umw" id="Qdb-3C-Lbf"/>
+                        <outlet property="bodyTypePicker" destination="wKM-ef-fkX" id="0OF-jp-A0p"/>
                         <outlet property="carsHorsePowerTxt" destination="qKL-SI-9bp" id="ypG-R4-isC"/>
                         <outlet property="carsManufacturerTxt" destination="S7h-ev-f57" id="Ha9-bc-wsu"/>
                         <outlet property="carsModelTxt" destination="DQR-nF-81m" id="pyv-qX-1lL"/>
-                        <outlet property="engineTypeTxt" destination="8qM-O0-tSx" id="Bjh-DK-jrg"/>
-                        <outlet property="issueDateTxt" destination="AjS-Rt-maQ" id="HuU-Ar-Nnx"/>
+                        <outlet property="datePicker" destination="LKi-m6-0gr" id="uh5-T9-vVI"/>
+                        <outlet property="engineTypePicker" destination="E5N-VI-oXY" id="WDe-jk-wmQ"/>
                         <segue destination="N8K-Hk-UTD" kind="unwind" identifier="saving" unwindAction="saveToMainViewControllerWithSegue:" id="o39-M9-tHp"/>
                     </connections>
                 </tableViewController>
