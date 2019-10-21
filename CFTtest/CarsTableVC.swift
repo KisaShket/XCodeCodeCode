@@ -12,7 +12,6 @@ import RealmSwift
 class CarsTableVC:UITableViewController{
     var dataSrc: Results<CarsModel>!
     
-    //MARK:- обновление вью, получение данных
     func reloadTable(){
         dataSrc = CarsController.fetchCars()
         tableView?.reloadData()
@@ -54,7 +53,7 @@ class CarsTableVC:UITableViewController{
             EditCars.manufacturerToEdit = Cars.manufacturer
             EditCars.modelToEdit = Cars.model
             EditCars.horsePowerToEdit = Cars.horsePower
-           
+            EditCars.issueDateToEdit = Cars.issueDate
         }
     }
     
