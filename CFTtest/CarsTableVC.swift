@@ -36,7 +36,9 @@ class CarsTableVC:UITableViewController{
         let cell = tableView.dequeueReusableCell(withIdentifier: "carsCell", for: indexPath)
         let cars = dataSrc[indexPath.row]
         cell.textLabel?.text = cars.manufacturer + " " + cars.model
+        if cars.horsePower != ""{
         cell.detailTextLabel?.text = cars.horsePower + " л.с."
+        }
         return cell
     }
     
