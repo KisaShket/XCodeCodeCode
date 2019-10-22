@@ -17,7 +17,7 @@ class AddEditCars:UITableViewController,UIPickerViewDelegate,UIPickerViewDataSou
     @IBOutlet weak var bodyTypePicker: UIPickerView!
     @IBOutlet weak var issueDateTxt: UITextField!
     
-    
+    var checker:Bool = false
     let datePicker = UIDatePicker()
     let engineType = EngineAndBodyTypes().engineTypes
     let bodyType = EngineAndBodyTypes().bodyTypes
@@ -58,6 +58,7 @@ class AddEditCars:UITableViewController,UIPickerViewDelegate,UIPickerViewDataSou
             }
     
     
+    
     func savingCars(){
         let newCar = CarsModel()
         newCar.manufacturer = carsManufacturerTxt.text!
@@ -74,11 +75,8 @@ class AddEditCars:UITableViewController,UIPickerViewDelegate,UIPickerViewDataSou
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        
         issueDateTxt.inputView = datePicker
         datePicker.datePickerMode = .date
-        
         datePicker.addTarget(self, action:#selector(AddEditCars.dateChanged(datePicker:)), for: .valueChanged)
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
@@ -86,6 +84,7 @@ class AddEditCars:UITableViewController,UIPickerViewDelegate,UIPickerViewDataSou
         let flexSpc = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         toolBar.setItems([flexSpc, doneButton], animated: true)
         issueDateTxt.inputAccessoryView = toolBar
+        
         
     }
     
@@ -108,9 +107,20 @@ class AddEditCars:UITableViewController,UIPickerViewDelegate,UIPickerViewDataSou
         issueDateTxt.text = issueDateToEdit
     }
     
+    func allertEmptyFields(){
+        let alert = UIAlertController(title: "Поля не заполнены", message: "Заполните все данные", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true,completion: nil)
+    }
+    
       @IBAction func saveCar(_ sender: Any) {
+        if (carsManufacturerTxt.text?.isEmpty)! || (carsModelTxt.text?.isEmpty)! || (carsHorsePowerTxt.text?.isEmpty)!{
+            allertEmptyFields()
+        }else{
         savingCars()
+        
         self.navigationController?.popToRootViewController(animated: true)
+        }
     }
 
 }
