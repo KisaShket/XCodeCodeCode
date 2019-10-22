@@ -114,7 +114,7 @@ class AddEditCars:UITableViewController,UIPickerViewDelegate,UIPickerViewDataSou
     }
     
       @IBAction func saveCar(_ sender: Any) {
-        if (carsManufacturerTxt.text?.isEmpty)! || (carsModelTxt.text?.isEmpty)! || (carsHorsePowerTxt.text?.isEmpty)!{
+        if (carsManufacturerTxt.text?.isEmpty)! || (carsModelTxt.text?.isEmpty)! || (carsHorsePowerTxt.text?.isEmpty)! || (issueDateTxt.text?.isEmpty)!{
             allertEmptyFields()
         }else{
         savingCars()
